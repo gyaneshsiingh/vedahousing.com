@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {
-    root: import.meta.dirname,
-  },
+  transpilePackages: ['firebase', '@firebase'],
 };
 
 export default nextConfig;
