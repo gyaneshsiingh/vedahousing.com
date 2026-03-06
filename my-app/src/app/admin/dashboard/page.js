@@ -70,7 +70,7 @@ export default function AdminDashboard() {
                 <div className="admin-topbar-inner">
                     <div className="admin-topbar-left">
                         <img src="/veda_logo.png" alt="Vedahousing" className="admin-topbar-logo" />
-                        <span className="admin-topbar-email">{user?.email}</span>
+                        <span className="admin-topbar-tag">Admin Panel</span>
                     </div>
                     <div className="admin-topbar-actions">
                         <Link href="/admin/dashboard/upload" className="admin-btn-add">+ Add Property</Link>

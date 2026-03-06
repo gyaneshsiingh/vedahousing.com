@@ -1,3 +1,17 @@
+:root {
+  --font-inter: 'Inter', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
 .vh-app {
   min-height: 100vh;
   background-color: #f9fafb;
@@ -1011,9 +1025,16 @@
   object-fit: contain;
 }
 
-.admin-topbar-email {
-  font-size: 0.82rem;
-  color: #6b7280;
+.admin-topbar-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #f97316;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.2);
 }
 
 .admin-topbar-actions {
@@ -1356,7 +1377,7 @@
     flex-direction: column;
   }
 
-  .admin-topbar-email {
+  .admin-topbar-tag {
     display: none;
   }
 }
