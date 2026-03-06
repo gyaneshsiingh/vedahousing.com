@@ -3,12 +3,43 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
-import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
 import { useAuth } from '@/context/AuthContext'
-import { db, storage } from '@/firebase/config'
+import { db } from '@/firebase/config'
 import Link from 'next/link'
 
+const CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+const UPLOAD_PRESET = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
 const PROPERTY_TYPES = ['Buy', 'Rent', 'PG']
+
+async function uploadToCloudinary(file, onProgress) {
+    const formData = new FormData()
+    formData.append('file', file)
+    formData.append('upload_preset', UPLOAD_PRESET)
+    formData.append('folder', 'vedahousing/properties')
+
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest()
+        xhr.open('POST', `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`)
+
+        xhr.upload.addEventListener('progress', (e) => {
+            if (e.lengthComputable) {
+                onProgress(Math.round((e.loaded / e.total) * 100))
+            }
+        })
+
+        xhr.addEventListener('load', () => {
+            if (xhr.status === 200) {
+                const data = JSON.parse(xhr.responseText)
+                resolve({ url: data.secure_url, publicId: data.public_id })
+            } else {
+                reject(new Error(`Upload failed: ${xhr.responseText}`))
+            }
+        })
+
+        xhr.addEventListener('error', () => reject(new Error('Network error during upload')))
+        xhr.send(formData)
+    })
+}
 
 export default function UploadProperty() {
     const { user } = useAuth()
@@ -44,18 +75,8 @@ export default function UploadProperty() {
         if (!imageFile) { setError('Please select a property image.'); return }
         setUploading(true)
         try {
-            // Step 1: Upload image
-            const imageRef = `properties/${Date.now()}_${imageFile.name}`
-            const uploadTask = uploadBytesResumable(ref(storage, imageRef), imageFile)
-
-            const imageUrl = await new Promise((resolve, reject) => {
-                uploadTask.on(
-                    'state_changed',
-                    (snap) => setProgress(Math.round((snap.bytesTransferred / snap.totalBytes) * 100)),
-                    reject,
-                    async () => resolve(await getDownloadURL(uploadTask.snapshot.ref))
-                )
-            })
+            // Step 1: Upload image to Cloudinary
+            const { url: imageUrl, publicId: imageRef } = await uploadToCloudinary(imageFile, setProgress)
 
             // Step 2: Save to Firestore
             await addDoc(collection(db, 'properties'), {
@@ -70,7 +91,7 @@ export default function UploadProperty() {
             router.push('/admin/dashboard')
         } catch (err) {
             console.error(err)
-            setError('Upload failed. Please try again.')
+            setError(err.message || 'Upload failed. Please try again.')
             setUploading(false)
         }
     }

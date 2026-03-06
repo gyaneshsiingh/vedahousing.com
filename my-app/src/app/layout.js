@@ -72,19 +72,41 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    name: "Vedahousing",
-    url: "https://vedahousing.com",
-    description:
-      "Browse verified property listings in Varanasi. Buy or rent apartments, get interior design services, and book virtual or in-person tours.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Varanasi",
-      addressRegion: "Uttar Pradesh",
-      addressCountry: "IN",
-    },
-    telephone: "+919455664970",
-    areaServed: "Varanasi",
+    "@graph": [
+      {
+        "@type": "RealEstateAgent",
+        "@id": "https://vedahousing.com/#organization",
+        name: "Vedahousing",
+        url: "https://vedahousing.com",
+        description:
+          "Browse verified property listings in Varanasi. Buy or rent apartments, get interior design services, and book virtual or in-person tours.",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Varanasi",
+          addressRegion: "Uttar Pradesh",
+          addressCountry: "IN",
+        },
+        telephone: "+919455664970",
+        areaServed: "Varanasi",
+        sameAs: ["https://vedahousing.com"],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://vedahousing.com/#website",
+        url: "https://vedahousing.com",
+        name: "Vedahousing",
+        description: "Verified property listings in Varanasi – Buy, Rent & PG",
+        publisher: { "@id": "https://vedahousing.com/#organization" },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: "https://vedahousing.com/properties?search={search_term_string}",
+          },
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
   };
 
   return (

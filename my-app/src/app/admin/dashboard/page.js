@@ -3,9 +3,8 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { collection, getDocs, deleteDoc, doc, query, orderBy } from 'firebase/firestore'
-import { ref, deleteObject } from 'firebase/storage'
 import { useAuth } from '@/context/AuthContext'
-import { db, storage } from '@/firebase/config'
+import { db } from '@/firebase/config'
 import Link from 'next/link'
 
 export default function AdminDashboard() {
@@ -43,9 +42,6 @@ export default function AdminDashboard() {
         if (!confirm(`Delete "${property.title}"?`)) return
         setDeleting(property.id)
         try {
-            if (property.imageRef) {
-                await deleteObject(ref(storage, property.imageRef)).catch(() => { })
-            }
             await deleteDoc(doc(db, 'properties', property.id))
             setProperties(prev => prev.filter(p => p.id !== property.id))
         } catch (e) {
