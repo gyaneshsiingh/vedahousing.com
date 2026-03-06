@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Hero = () => {
     return (
@@ -37,13 +38,14 @@ const Hero = () => {
                 <div className="vh-hero-visual" aria-hidden="true">
                     <div className="vh-card-main">
                         <div className="vh-card-image-wrapper">
-                            <img
+                            <Image
                                 src="/image copy 3.png"
                                 alt="Buy & Rent Apartment in Varanasi"
                                 className="vh-card-img-fit"
-                                width="520"
-                                height="160"
-                                loading="eager"
+                                width={520}
+                                height={160}
+                                priority
+                                quality={80}
                             />
                         </div>
                         <div className="vh-card-body">
@@ -62,13 +64,14 @@ const Hero = () => {
                     <div className="vh-card-stats">
                         <div className="vh-stat-card vh-stat-card-interior">
                             <div className="vh-card-image-interior">
-                                <img
+                                <Image
                                     src="/image.png"
-                                    alt="Interior Design Services"
+                                    alt="Interior Design Services Varanasi"
                                     className="vh-card-img-fit"
-                                    width="240"
-                                    height="110"
+                                    width={240}
+                                    height={110}
                                     loading="lazy"
+                                    quality={75}
                                 />
                             </div>
                             <div className="vh-stat-content">
@@ -80,13 +83,14 @@ const Hero = () => {
 
                         <div className="vh-stat-card vh-stat-card-interior">
                             <div className="vh-card-image-consulting">
-                                <img
+                                <Image
                                     src="/image copy.png"
-                                    alt="Architecture Consulting"
+                                    alt="Architecture Consulting Varanasi"
                                     className="vh-card-img-fit"
-                                    width="240"
-                                    height="110"
+                                    width={240}
+                                    height={110}
                                     loading="lazy"
+                                    quality={75}
                                 />
                             </div>
                             <div className="vh-stat-content">
