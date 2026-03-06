@@ -28,7 +28,10 @@ const Hero = () => {
                         </a>
                     </div>
 
-                    <p className="vh-meta">Trusted by homebuyers across major Indian cities · New properties every week</p>
+                    <p className="vh-meta">
+                        Varanasi&apos;s trusted property dealer for flats, apartments &amp; houses ·
+                        Interior designer &amp; architecture consulting · New listings every week
+                    </p>
                 </div>
 
                 <div className="vh-hero-visual" aria-hidden="true">
