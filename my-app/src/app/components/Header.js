@@ -95,14 +95,17 @@ const Header = () => {
             {menuOpen && (
                 <div className="vh-mobile-menu" onClick={() => setMenuOpen(false)}>
                     <div className="vh-mobile-menu-inner" onClick={e => e.stopPropagation()}>
-                        <Link href="/" className="vh-mobile-menu-logo" onClick={() => setMenuOpen(false)}>
+                        {/* <Link href="/" className="vh-mobile-menu-logo" onClick={() => setMenuOpen(false)}>
                             <img src="/veda_logo.png" alt="Vedahousing" className="vh-mobile-menu-logo-img" />
                             <span>Vedahousing</span>
-                        </Link>
+                        </Link> */}
                         <nav className="vh-mobile-menu-nav">
-                            <Link href="/properties" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
-                                🏠 Explore Properties
-                            </Link>
+                            <a href="/" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
+                                🏠 Home
+                            </a>
+                            <a href="/properties" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
+                                🔍 Explore Properties
+                            </a>
                             <a href="/contact" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
                                 📞 Contact
                             </a>
