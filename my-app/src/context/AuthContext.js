@@ -4,8 +4,8 @@ import { createContext, useContext, useEffect, useState } from 'react'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { auth } from '@/firebase/config'
 
-// ✏️ Replace this with YOUR Google account email
-export const ADMIN_EMAIL = 'gsdd9875@gmail.com'
+// ✏️ Set NEXT_PUBLIC_ADMIN_EMAIL in your .env.local
+export const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL
 
 const AuthContext = createContext(null)
 
