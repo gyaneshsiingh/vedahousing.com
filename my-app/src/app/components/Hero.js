@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 const Hero = () => {
@@ -16,9 +17,9 @@ const Hero = () => {
                     </p>
 
                     <div className="vh-actions">
-                        <button type="button" className="vh-btn vh-btn-primary">
+                        <Link href="/properties" className="vh-btn vh-btn-primary">
                             Browse homes
-                        </button>
+                        </Link>
                         <a
                             href="https://wa.me/919455664970?text=Hi%2C%20I%27m%20interested%20in%20Vedahousing%20services"
                             className="vh-btn vh-btn-secondary"
