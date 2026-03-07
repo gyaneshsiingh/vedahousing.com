@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-inter);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 
@@ -64,13 +64,22 @@ body {
 }
 
 .vh-logo-image {
-  /* height:          120px; */
+  object-fit: contain;
+  width: auto;
   height: 10rem;
-  /*width: auto; */
+  transition: opacity .2s ease-out;
+  display: block;
+  margin-top: 17px;
+  margin-left: 20px;
+}
+
+/* height: 120px;
+
+  width: auto;
   display: block;
   object-fit: contain;
-  /* transition: opacity 200ms ease-out; */
-}
+  transition: opacity 200ms ease-out; */
+
 
 .vh-logo-image:hover {
   opacity: 0.85;
@@ -877,9 +886,7 @@ body {
   .vh-btn {
     flex: 1 1 100%;
     justify-content: center;
-    border-color: #f97316;
-    background-color: #f97316;
-    color: #fff;
+    color: black;
   }
 
 
