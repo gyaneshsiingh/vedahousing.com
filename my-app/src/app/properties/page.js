@@ -14,6 +14,8 @@ export default function PropertiesPage() {
     const [filter, setFilter] = useState('All')
     const [search, setSearch] = useState('')
 
+    
+
     useEffect(() => {
         const q = query(collection(db, 'properties'), orderBy('createdAt', 'desc'))
         const unsub = onSnapshot(q, (snap) => {
@@ -23,12 +25,15 @@ export default function PropertiesPage() {
         return () => unsub()
     }, [])
 
+
+
     const filtered = properties.filter(p => {
         const matchesType = filter === 'All' || p.type === filter
         const q = search.toLowerCase()
         const matchesSearch = !q || p.title?.toLowerCase().includes(q) || p.location?.toLowerCase().includes(q)
         return matchesType && matchesSearch
     })
+
 
     return (
         <div className="vh-app">

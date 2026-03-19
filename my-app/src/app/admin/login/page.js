@@ -17,8 +17,6 @@ export default function AdminLogin() {
         setLoading(true)
         try {
             await signInWithPopup(auth, provider)
-            // AuthContext will check if the email is the admin email
-            // If allowed, redirect to dashboard
             router.push('/admin/dashboard')
         } catch (err) {
             if (err.code !== 'auth/popup-closed-by-user') {
