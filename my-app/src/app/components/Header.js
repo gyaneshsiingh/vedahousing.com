@@ -5,13 +5,14 @@ import Link from 'next/link'
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import { auth } from '@/firebase/config'
 import { useAuth } from '@/context/AuthContext'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 
 const provider = new GoogleAuthProvider()
 
 const Header = () => {
     const { user, logout } = useAuth()
     const router = useRouter()
+    const pathname = usePathname()
     const [menuOpen, setMenuOpen] = useState(false)
 
     const handleLogin = async () => {
@@ -48,8 +49,15 @@ const Header = () => {
                     {/* Desktop nav */}
                     <div className="vh-nav-auth vh-nav-desktop">
                         <nav className="vh-nav">
-                            <a href="/properties" className='vh-nav-link'>Explore</a>
-                            <a href="/contact" className='vh-nav-link'>Contact</a>
+                            {pathname !== '/' && (
+                                <a href="/" className='vh-nav-link'>Home</a>
+                            )}
+                            {pathname !== '/properties' && (
+                                <a href="/properties" className='vh-nav-link'>Explore</a>
+                            )}
+                            {pathname !== '/contact' && (
+                                <a href="/contact" className='vh-nav-link'>Contact</a>
+                            )}
                         </nav>
                         <div className="vh-auth">
                             {user ? (
@@ -100,15 +108,21 @@ const Header = () => {
                             <span>Vedahousing</span>
                         </Link> */}
                         <nav className="vh-mobile-menu-nav">
-                            <a href="/" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
-                                🏠 Home
-                            </a>
-                            <a href="/properties" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
-                                🔍 Explore Properties
-                            </a>
-                            <a href="/contact" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
-                                📞 Contact
-                            </a>
+                            {pathname !== '/' && (
+                                <a href="/" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
+                                    🏠 Home
+                                </a>
+                            )}
+                            {pathname !== '/properties' && (
+                                <a href="/properties" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
+                                    🔍 Explore Properties
+                                </a>
+                            )}
+                            {pathname !== '/contact' && (
+                                <a href="/contact" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
+                                    📞 Contact
+                                </a>
+                            )}
                         </nav>
                         <div className="vh-mobile-menu-auth">
                             {user ? (

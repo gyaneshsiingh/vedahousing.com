@@ -13,11 +13,12 @@ export default function AdminDashboard() {
     const [properties, setProperties] = useState([])
     const [loading, setLoading] = useState(true)
     const [deleting, setDeleting] = useState(null)
+    const [isLoggingOut, setIsLoggingOut] = useState(false)
 
     // Redirect if not logged in
     useEffect(() => {
-        if (user === null) router.replace('/admin/login')
-    }, [user, router])
+        if (user === null && !isLoggingOut) router.replace('/admin/login')
+    }, [user, router, isLoggingOut])
 
     // Fetch properties once logged in
     useEffect(() => {
@@ -52,8 +53,9 @@ export default function AdminDashboard() {
     }
 
     const handleLogout = async () => {
-        await logout()
+        setIsLoggingOut(true)
         router.push('/')
+        await logout()
     }
 
     if (user === undefined || loading) {

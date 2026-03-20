@@ -2,38 +2,72 @@
 
 import { createContext, useContext, useEffect, useState } from 'react'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
-import { auth } from '@/firebase/config'
+import { auth, db } from '@/firebase/config';
+import { doc, getDoc } from 'firebase/firestore';
 
-// ✏️ Set NEXT_PUBLIC_ADMIN_EMAIL in your .env.local
-export const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL
+
+// export const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL
 
 const AuthContext = createContext(null)
 
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(undefined) // undefined = loading, null = not logged in
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        const unsub = onAuthStateChanged(auth, (u) => {
-            // Only allow the admin email — kick everyone else out
-            if (u && u.email !== ADMIN_EMAIL) {
-                signOut(auth)
-                setUser(null)
-            } else {
-                setUser(u ?? null)
+        const unsub = onAuthStateChanged(auth, async (u) => {
+
+            if (!u) {
+                setUser(null);
+                setError(null);
+                return;
+            }
+
+            // The user just authenticated, but we need to verify their
+            // admin status in Firestore. While we do this async check,
+            // we must put the state back to 'undefined' (loading) so 
+            // the Dashboard doesn't immediately kick them out.
+            setUser(undefined);
+
+            if (!u.email) {
+                await signOut(auth);
+                setUser(null);
+                setError('No email found for user')
+                return;
+            }
+
+            try {
+                const adminRef = doc(db, 'admins', u.email);
+                const adminSnap = await getDoc(adminRef);
+
+                if (adminSnap.exists()) {
+                    setUser(u);
+                    setError(null);
+                }
+                else {
+                    await signOut(auth);
+                    setUser(null);
+                    setError('Unauthorized: Your account does not have admin privileges');
+                }
+            } catch (err) {
+                console.error(err);
+                setUser(null);
+                setError('Something went wrong');
             }
         })
         return () => unsub()
     }, [])
 
-    const logout = () => signOut(auth)
+    const logout = async () => {
+        await signOut(auth);
+        setUser(null);
+    };
 
     return (
-        <AuthContext.Provider value={{ user, logout }}>
+        <AuthContext.Provider value={{ user, error, logout }}>
             {children}
         </AuthContext.Provider>
     )
 }
 
-export function useAuth() {
-    return useContext(AuthContext)
-}
+export const useAuth = () => useContext(AuthContext)
