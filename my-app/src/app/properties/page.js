@@ -29,8 +29,15 @@ export default function PropertiesPage() {
 
     const filtered = properties.filter(p => {
         const matchesType = filter === 'All' || p.type === filter
-        const q = search.toLowerCase()
-        const matchesSearch = !q || p.title?.toLowerCase().includes(q) || p.location?.toLowerCase().includes(q)
+        const queryWords = search.toLowerCase().trim().split(/\s+/)
+        
+        const matchesSearch = queryWords[0] === "" || queryWords.every(word => 
+            p.title?.toLowerCase().includes(word) || 
+            p.location?.toLowerCase().includes(word) ||
+            p.type?.toLowerCase().includes(word) ||
+            p.description?.toLowerCase().includes(word)
+        )
+        
         return matchesType && matchesSearch
     })
 

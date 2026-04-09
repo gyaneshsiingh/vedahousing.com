@@ -74,6 +74,7 @@ export default function UploadProperty() {
         setError('')
         if (!imageFile) { setError('Please select a property image.'); return }
         setUploading(true)
+        setProgress(0)
         try {
             // Step 1: Upload image to Cloudinary
             const { url: imageUrl, publicId: imageRef } = await uploadToCloudinary(imageFile, setProgress)

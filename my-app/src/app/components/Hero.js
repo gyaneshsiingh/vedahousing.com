@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Hero = () => {
+
     return (
         <section className="vh-hero">
             <div className="vh-hero-inner">
@@ -103,6 +104,29 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+
+
+
+            {/* <div className="vh-featured-section">
+                <div className="vh-featured-inner">
+                    <div className="vh-featured-content">
+                        
+                        <div className="vh-actions">
+                            <Link href="/properties" className="vh-btn vh-btn-primary">
+                                INTERIOR DESIGN
+                            </Link>
+                            <a
+                                href="https://wa.me/919455664970?text=Hi%2C%20I%27m%20interested%20in%20Vedahousing%20services"
+                                className="vh-btn vh-btn-secondary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Get An Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> */}
         </section>
     )
 }

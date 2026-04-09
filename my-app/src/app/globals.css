@@ -1907,3 +1907,214 @@ body {
 .ct-wa-link:hover {
   text-decoration: underline;
 }
+
+/* ─── Carousel ────────────────────────────────────────────── */
+.pc-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
+.pc-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.pc-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.pc-carousel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.pc-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 14px;
+  color: #333;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.pc-carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.pc-carousel-prev {
+  left: 8px;
+}
+
+.pc-carousel-next {
+  right: 8px;
+}
+
+/* ─── Upload Preview Grid ─────────────────────────────────── */
+.upload-image-label-multiple {
+  flex-direction: column;
+  height: auto;
+  min-height: 160px;
+}
+
+.upload-preview-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 16px;
+  justify-content: center;
+}
+
+.upload-preview-item {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ─── Property Details Page ───────────────────────────────── */
+
+.pd-main {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pd-main-error {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pd-container {
+  padding: 3rem 1.25rem;
+}
+
+.pd-back-btn {
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.pd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  align-items: start;
+}
+
+.pd-image {
+  width: 100%;
+  border-radius: 1.4rem;
+  object-fit: cover;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 25px 60px rgba(148, 163, 184, 0.2);
+}
+
+.pd-image-placeholder {
+  width: 100%;
+  height: 400px;
+  background-color: #e2e8f0;
+  border-radius: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pd-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 1rem 0;
+}
+
+.pd-badge {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+  top: 0;
+}
+
+.pd-title {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin: 0 0 0.5rem 0;
+  color: #0f172a;
+  line-height: 1.1;
+}
+
+.pd-location {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.pd-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #f97316;
+}
+
+.pd-chips-container {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.pd-chip {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.pd-description-container {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.pd-description-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.pd-description-text {
+  color: #475569;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  font-size: 1.05rem;
+}
+
+.pd-cta-container {
+  margin-top: auto;
+  padding-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.pd-cta {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.vh-featured-content {
+  margin: 20px;
+}
