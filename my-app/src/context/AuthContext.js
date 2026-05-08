@@ -41,14 +41,12 @@ export function AuthProvider({ children }) {
                 const adminSnap = await getDoc(adminRef);
 
                 if (adminSnap.exists()) {
-                    setUser(u);
-                    setError(null);
+                    u.isAdmin = true;
+                } else {
+                    u.isAdmin = false;
                 }
-                else {
-                    await signOut(auth);
-                    setUser(null);
-                    setError('Unauthorized: Your account does not have admin privileges');
-                }
+                setUser(u);
+                setError(null);
             } catch (err) {
                 console.error(err);
                 setUser(null);

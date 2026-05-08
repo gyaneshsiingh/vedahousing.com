@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="vh-footer-grid">
                     {/* NAP – critical for local SEO */}
                     <div className="vh-footer-brand">
-                        <span className="vh-footer-logo">Vedahousing</span>
+                        <span className="vh-footer-logo">Vedahousing.com</span>
                         <address className="vh-footer-address">
                             Varanasi, Uttar Pradesh, India – 221010<br />
                             <a href="tel:+919455664970" className="vh-footer-phone">+91 94556 64970</a>

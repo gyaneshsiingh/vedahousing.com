@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
-import { auth } from '@/firebase/config'
+import { auth, db } from '@/firebase/config'
+import { doc, getDoc } from 'firebase/firestore'
 import { useAuth } from '@/context/AuthContext'
 import { useRouter, usePathname } from 'next/navigation'
 
@@ -18,8 +19,18 @@ const Header = () => {
     const handleLogin = async () => {
         setMenuOpen(false)
         try {
-            await signInWithPopup(auth, provider)
-            router.push('/admin/dashboard')
+            const credential = await signInWithPopup(auth, provider)
+            const u = credential.user;
+            
+            // Check if admin to decide where to route
+            const adminRef = doc(db, 'admins', u.email);
+            const adminSnap = await getDoc(adminRef);
+            
+            if (adminSnap.exists()) {
+                router.push('/admin/dashboard')
+            } else {
+                router.push('/')
+            }
         } catch (err) {
             const ignored = ['auth/popup-closed-by-user', 'auth/user-cancelled']
             if (!ignored.includes(err.code)) {
