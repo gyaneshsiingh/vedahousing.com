@@ -146,6 +146,7 @@ body {
 }
 
 .vh-login-btn {
+
   border: 1.5px solid #1e293b;
   background: transparent;
   color: #1e293b;
@@ -528,6 +529,7 @@ body {
   background: #0b1121;
   padding: 1rem 0 1rem;
   color: white;
+  z-index: -1;
 }
 
 
