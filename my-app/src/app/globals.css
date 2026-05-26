@@ -300,7 +300,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-weight: 700;
+  font-weight: 600;
   text-shadow: 0 8px 22px rgba(234, 88, 12, 0.25);
   line-height: 1.2;
 }
@@ -559,7 +559,7 @@ body {
 
 .vh-footer-logo {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
 }
 
@@ -579,7 +579,7 @@ body {
 
 .vh-footer-col-heading {
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   margin: 0 0 1.25rem 0;
 }
@@ -812,7 +812,7 @@ body {
     gap: 0.6rem;
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #0f172a;
   }
 
@@ -898,7 +898,7 @@ body {
 
 .hs-title {
   font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.04em;
   color: #0f172a;
   margin: 0.6rem 0 0.6rem;
@@ -948,8 +948,8 @@ body {
 
 .vhl-title {
   font-size: clamp(2rem, 3vw + 1rem, 3rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-weight: 600;
+  letter-spacing: -0.02rem;
   color: #0f172a;
   margin: 0.6rem 0 0.7rem;
 }
@@ -1128,7 +1128,7 @@ body {
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -1158,7 +1158,7 @@ body {
 
 .pc-title {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0f172a;
   margin: 0;
 }
@@ -1171,7 +1171,7 @@ body {
 
 .pc-price {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #f97316;
   margin: 0.2rem 0;
 }
@@ -1237,7 +1237,7 @@ body {
 
 .admin-login-title {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #0f172a;
   text-align: center;
   margin: 0 0 0.3rem;
@@ -1394,7 +1394,7 @@ body {
   background: linear-gradient(to right, #f97316, #ea580c);
   color: #fff;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -1438,7 +1438,7 @@ body {
 
 .admin-page-title {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #0f172a;
   margin-bottom: 1.5rem;
   display: flex;
@@ -1472,7 +1472,7 @@ body {
   text-align: left;
   padding: 0.85rem 1.1rem;
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #6b7280;
@@ -1512,7 +1512,7 @@ body {
 }
 
 .admin-td-price {
-  font-weight: 700;
+  font-weight: 600;
   color: #f97316;
 }
 
@@ -1520,7 +1520,7 @@ body {
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -1663,7 +1663,7 @@ body {
   background: linear-gradient(to right, #f97316, #ea580c);
   color: #fff;
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   box-shadow: 0 8px 28px rgba(249, 115, 22, 0.4);
@@ -1769,7 +1769,7 @@ body {
 
 .ct-title {
   font-size: 1.6rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #0f172a;
   letter-spacing: -0.04em;
   margin: 0 0 0.4rem;
@@ -1835,7 +1835,7 @@ body {
   background: linear-gradient(to right, #f97316, #ea580c);
   color: #fff;
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);
   transition: transform 180ms ease, box-shadow 180ms ease;
@@ -2049,7 +2049,7 @@ body {
 
 .pd-price {
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #f97316;
 }
 
@@ -2119,7 +2119,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 600;
   color: #475569;
 }
 
@@ -2152,7 +2152,7 @@ body {
 
 .vh-stat-number {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 600;
   color: black;
   margin-bottom: 0.5rem;
 
@@ -2191,7 +2191,7 @@ body {
 
 .vh-services-title {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0f172a;
   margin-bottom: 1rem;
 }
@@ -2252,7 +2252,7 @@ body {
 
 .vh-service-card-title {
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
@@ -2274,6 +2274,52 @@ body {
   }
 }
 
+/* interior page */
+
+.vh-approach-section {
+  background: #f9fafb;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.vh-approach-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.vh-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.vh-approach-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: black;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.02rem;
+}
+
+.vh-approah-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+}
+
+.vh-approach-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+
+
 /* CONTACT CTA */
 
 .vh-cta-section {
@@ -2290,7 +2336,7 @@ body {
 
 .vh-cta-title {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: white;
   margin: 0 0 0.75rem 0;
   letter-spacing: -0.02rem;
@@ -2391,6 +2437,71 @@ body {
 }
 
 @keyframes vh-shimmer {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* interior */
+
+.vh-interior-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+.vh-interior-hero-content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.vh-interior-label {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.vh-interior-title {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #0f172a;
+  line-height: 1.1;
+  letter-spacing: -0.02;
+  margin: 0 0 12px 0;
+}
+
+.vh-interior-desc {
+  font-size: 16px;
+  max-width: 650px;
+  color: #475569
+}
+
+.vh-interior-btn {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.vh-btn-primary {
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
 }
