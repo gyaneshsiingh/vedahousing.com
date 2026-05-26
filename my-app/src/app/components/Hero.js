@@ -3,8 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Stats from "./Stats";
 import Services from "./Services";
-
-
+import ContactCTA from "./ContactCTA";
 
 
 const Hero = () => {
@@ -12,14 +11,12 @@ const Hero = () => {
     return (
         <>
             <section className="vh-hero">
-
-
                 <div className="vh-hero-inner">
                     <div className="vh-hero-content">
                         <p className="vh-eyebrow">SMART LIVING · VEDAHOUSING</p>
                         <h1 className="vh-title">
                             Discover  <br /> <span className='span-and'>&</span> <br /> Design home
-                            <span className="vh-title-highlight"> design that fit your life.</span>
+                            <span className="vh-title-highlight"> design that fit your <br /> life.</span>
                         </h1>
                         <p className="vh-subtitle">
                             Browse verified listings, compare real-time prices, and book virtual or in-person tours in just a few taps.
@@ -157,6 +154,7 @@ const Hero = () => {
 
             <Stats />
             <Services />
+            <ContactCTA />
 
         </>
     );

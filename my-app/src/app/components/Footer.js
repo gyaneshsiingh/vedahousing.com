@@ -10,29 +10,24 @@ const Footer = () => {
                 <div className="vh-footer-grid">
                     {/* NAP – critical for local SEO */}
                     <div className="vh-footer-brand">
-                        <span className="vh-footer-logo">Vedahousing.com</span>
-                        <address className="vh-footer-address">
-                            Varanasi, Uttar Pradesh, India – 221010<br />
-                            <a href="tel:+919455664970" className="vh-footer-phone">+91 94556 64970</a>
-                        </address>
+                        <span className="vh-footer-logo">Vedahousing</span>
                         <p className="vh-footer-tagline">
-                            Verified flats &amp; property in Varanasi.<br />
-                            Interior design &amp; consulting services.
+                            Transforming spaces and creating exceptional real estate experience  since 2020.
                         </p>
                     </div>
 
-                    {/* Internal links help Google crawl services */}
-                    <nav className="vh-footer-nav" aria-label="Footer navigation">
-                        <h3 className="vh-footer-nav-heading">Services</h3>
+
+                    <div className="vh-footer-col" >
+                        <h3 className="vh-footer-col-heading">Services</h3>
                         <ul className="vh-footer-nav-list">
-                            <li><Link href="/properties">Flats &amp; Property in Varanasi</Link></li>
+                            <li><Link href="/properties">Real Estate</Link></li>
                             <li>
                                 <a
                                     href="https://wa.me/919455664970?text=Hi%2C%20I%27m%20interested%20in%20interior%20design%20services"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Interior Design Varanasi
+                                    Consulting
                                 </a>
                             </li>
                             <li>
@@ -41,7 +36,7 @@ const Footer = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Property &amp; Architecture Consulting
+                                    Interior Design
                                 </a>
                             </li>
                             <li>
@@ -50,11 +45,31 @@ const Footer = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Talk to an Expert
+                                    Architecture
                                 </a>
                             </li>
                         </ul>
-                    </nav>
+                    </div>
+
+                    <div className="vh-footer-col" >
+                        <h3 className="vh-footer-col-heading">Company</h3>
+                        <ul className="vh-footer-nav-list">
+                            <li><Link href="/about">About Us</Link></li>
+                            <li><Link href="/properties">Portfolio</Link></li>
+                            <li><Link href="/contact">Contact</Link></li>
+                        </ul>
+                    </div>
+                    <div className="vh-footer-col" >
+                        <h3 className="vh-footer-col-heading">Legal</h3>
+                        <ul className="vh-footer-nav-list">
+                            <li><Link href="/about">Privacy Policy</Link></li>
+                            <li><Link href="/properties">Terms of Services</Link></li>
+                            <li><Link href="/contact">Cookie Policy</Link></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="vh-footer-divider">
+                    {/* hhh */}
                 </div>
 
                 <div className="vh-footer-bottom">

@@ -21,11 +21,11 @@ const Header = () => {
         try {
             const credential = await signInWithPopup(auth, provider)
             const u = credential.user;
-            
+
             // Check if admin to decide where to route
             const adminRef = doc(db, 'admins', u.email);
             const adminSnap = await getDoc(adminRef);
-            
+
             if (adminSnap.exists()) {
                 router.push('/admin/dashboard')
             } else {
@@ -64,10 +64,10 @@ const Header = () => {
                                 <a href="/" className='vh-nav-link'>Home</a>
                             )}
                             {pathname !== '/properties' && (
-                                <a href="/properties" className='vh-nav-link'>Explore</a>
+                                <a href="/properties" className='vh-nav-link'>Properties</a>
                             )}
-                            {pathname !== '/contact' && (
-                                <a href="/contact" className='vh-nav-link'>Contact</a>
+                            {pathname !== '/interior' && (
+                                <a href="/" className='vh-nav-link'>Interior</a>
                             )}
                         </nav>
                         <div className="vh-auth">
