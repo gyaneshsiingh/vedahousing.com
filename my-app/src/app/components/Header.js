@@ -67,11 +67,13 @@ const Header = () => {
                                 <a href="/properties" className='vh-nav-link'>Properties</a>
                             )}
                             {pathname !== '/interior' && (
-                                <a href="/" className='vh-nav-link'>Interior</a>
+                                <a href="/interior" className='vh-nav-link'>Interior</a>
                             )}
                         </nav>
                         <div className="vh-auth">
-                            {user ? (
+                            {user === undefined ? (
+                                <div className="vh-auth-skeleton" />
+                            ) : user ? (
                                 <div className="vh-user-menu">
                                     {user.photoURL && (
                                         <img
@@ -126,17 +128,19 @@ const Header = () => {
                             )}
                             {pathname !== '/properties' && (
                                 <a href="/properties" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
-                                    🔍 Explore Properties
+                                    🔍  Properties
                                 </a>
                             )}
-                            {pathname !== '/contact' && (
-                                <a href="/contact" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
-                                    📞 Contact
+                            {pathname !== '/interior' && (
+                                <a href="/interior" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
+                                    Interior
                                 </a>
                             )}
                         </nav>
                         <div className="vh-mobile-menu-auth">
-                            {user ? (
+                            {user === undefined ? (
+                                <div className="vh-auth-skeleton" />
+                            ) : user ? (
                                 <div className="vh-mobile-menu-user">
                                     {user.photoURL && <img src={user.photoURL} alt={user.displayName} className="vh-avatar" referrerPolicy="no-referrer" />}
                                     <span>{user.displayName?.split(' ')[0]}</span>
