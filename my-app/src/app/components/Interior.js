@@ -72,6 +72,31 @@ const Interior = () => {
                 </div>
 
             </section>
+
+            <section className="vh-cta-section" id="schedule-consultation">
+                <div className="vh-cta-container">
+                    <div className="vh-cta-header">
+                        <h2 className="vh-cta-title">
+                            Ready To Transform Your Space?
+                        </h2>
+                        <p className="vh-cta-subtitle">
+                            Schedule a consultation with our interior design team to discuss your vision and explore possibilities.
+                        </p>
+                    </div>
+
+                    <div className="vh-cta-action">
+                        <a
+                            href="https://wa.me/919455664970?text=Hi%2C%20I'd%20like%20a%20consultation"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="vh-cta-btn"
+                        >
+                            BOOK YOUR CONSULTATION
+                        </a>
+                    </div>
+                </div>
+            </section>
+
         </>
 
     );
