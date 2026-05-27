@@ -40,7 +40,7 @@ body {
 .vh-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 200;
   backdrop-filter: blur(12px);
   /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(249, 250, 251, 0.9), transparent); */
   background: rgba(255, 255, 255, 0.8);
@@ -722,7 +722,7 @@ body {
   }
 
   .vh-logo-image-mobile {
-    height: 76px;
+    height: 32px;
     width: auto;
     object-fit: contain;
   }
@@ -799,9 +799,10 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     background: #fff;
-    border-radius: 0 0 1.5rem 1.5rem;
-    padding: 1.5rem 1.5rem 2rem;
+    /* border-radius: 0 0 1.5rem 1.5rem; */
+    padding: 5rem 1.5rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;

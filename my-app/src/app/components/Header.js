@@ -53,7 +53,7 @@ const Header = () => {
                     {/* Mobile: logo centered */}
                     <div className='vh-logo-mobile-wrap'>
                         <Link href="/">
-                            <img src="/veda_logo.png" alt="vedahousing" className="vh-logo-image-mobile" />
+                            <img src="/mobile-logo.png" alt="vedahousing" className="vh-logo-image-mobile" />
                         </Link>
                     </div>
 
@@ -133,7 +133,7 @@ const Header = () => {
                             )}
                             {pathname !== '/interior' && (
                                 <a href="/interior" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
-                                    Interior
+                                    🏠 Interior
                                 </a>
                             )}
                         </nav>
