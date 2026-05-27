@@ -15,7 +15,7 @@ const Interior = () => {
         },
         {
             title: "Precise Execution",
-            desc: "We handle every detail with care, ensuring your project is completed smoothly, on time, and within budge",
+            desc: "We handle every detail with care, ensuring your project is completed smoothly, on time, and within budget",
             icon: "/ruler.png"
         }
     ];
