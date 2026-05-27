@@ -237,6 +237,8 @@ body {
   }
 }
 
+
+
 .vh-hero {
   max-width: 1320px;
   margin: 1.75rem auto 0;
@@ -851,8 +853,11 @@ body {
   }
 
   .vh-hero-inner {
-    padding: 1.7rem 1.3rem 1.9rem;
-    border-radius: 1.4rem;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
   }
 
   .span-and {
