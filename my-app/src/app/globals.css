@@ -730,14 +730,15 @@ body {
   }
 
   .vh-header {
-
+    position: fixed;
     width: 100%;
-
-    body {
-      padding-top: 85px;
-    }
-
   }
+
+  body {
+    padding-top: 85px;
+  }
+
+
 
   .vh-header-inner {
     position: relative;
