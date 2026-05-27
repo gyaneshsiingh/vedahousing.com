@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import { auth, db } from '@/firebase/config'
@@ -15,6 +15,19 @@ const Header = () => {
     const router = useRouter()
     const pathname = usePathname()
     const [menuOpen, setMenuOpen] = useState(false)
+
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = 'hidden';
+        }
+        else {
+            document.body.style.oveflow = '';
+        }
+        return () => {
+            document.body.style.oberfloe = '';
+        };
+    }, [menuOpen]);
+
 
     const handleLogin = async () => {
         setMenuOpen(false)
