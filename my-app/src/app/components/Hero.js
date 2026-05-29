@@ -15,8 +15,8 @@ const Hero = () => {
                     <div className="vh-hero-content">
                         <p className="vh-eyebrow">SMART LIVING · VEDAHOUSING</p>
                         <h1 className="vh-title">
-                            Discover  <br /> <span className='span-and'>&</span> <br /> Design home
-                            <span className="vh-title-highlight"> design that fit your <br /> life.</span>
+                            Discover  <br /> <span className='span-and'>&</span> <br /> Design homes
+                            <span className="vh-title-highlight"> that fit your <br /> life.</span>
                         </h1>
                         <p className="vh-subtitle">
                             Browse verified listings, compare real-time prices, and book virtual or in-person tours in just a few taps.
@@ -36,7 +36,7 @@ const Hero = () => {
                             </a>
                         </div>
 
-                        <p className="vh-meta">
+                        <p className="vh-subtitle">
                             Varanasi&apos;s trusted property dealer for flats, apartments &amp; houses ·
                             Interior designer &amp; architecture consulting · New listings every week
                         </p>
