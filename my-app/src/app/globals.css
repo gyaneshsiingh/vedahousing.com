@@ -239,20 +239,15 @@ body {
 
 
 
-.vh-hero {
-  max-width: 1320px;
-  margin: 1rem auto 0;
-  padding: 0 1.5rem 2.5rem;
-
-}
 
 .vh-hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
-  gap: 0rem;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 48px;
   align-items: center;
   padding: 2.5rem 1.8rem;
-  border-radius: 3.8rem;
+  /* border-radius: 3.8rem; */
   background:
     radial-gradient(circle at top right, rgba(251, 146, 60, 0.12), transparent 58%),
     radial-gradient(circle at bottom left, rgba(248, 250, 252, 0.85), rgba(241, 245, 249, 0.95));
@@ -312,7 +307,7 @@ body {
   font-size: 0.9rem;
   line-height: 1.2;
   font-weight: 400;
-  text-align: center;
+
   color: #4b5563;
 }
 
@@ -407,6 +402,7 @@ body {
   height: 400px;
   width: 600px;
   overflow: hidden;
+  border-radius: 1.4rem;
 }
 
 .vh-card-img-fit {
@@ -706,7 +702,9 @@ body {
 
 .vh-nav-desktop {
   display: flex;
+  margin-right: 16px;
 }
+
 
 @media (max-width: 720px) {
   .vh-logo-desktop {
@@ -2351,7 +2349,7 @@ body {
 /* CONTACT CTA */
 
 .vh-cta-section {
-  background: #0f172a;
+  background: #172033;
   padding: 2.5rem 1.5rem;
   text-align: center;
 }
@@ -2532,4 +2530,85 @@ body {
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
+}
+
+/*.  phonpe dummy */
+
+/* Container to keep it centered */
+.vh-featured-project {
+  padding: 2rem 1.5rem;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* The wrapper that holds the image and cuts the rounded corners */
+.vh-featured-project-inner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  /* You can make this taller or shorter */
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.vh-featured-image {
+  object-fit: cover;
+}
+
+/* The secret trick: A dark gradient that fades from the bottom up */
+.vh-featured-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  z-index: 1;
+}
+
+/* Positioning the text at the bottom left */
+.vh-featured-content {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  z-index: 2;
+  color: white;
+}
+
+.vh-featured-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.vh-featured-title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+}
+
+.vh-featured-location {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Make it look good on mobile too */
+@media (max-width: 768px) {
+  .vh-featured-project-inner {
+    height: 450px;
+  }
+
+  .vh-featured-content {
+    bottom: 2rem;
+    left: 2rem;
+  }
+
+  .vh-featured-title {
+    font-size: 2rem;
+  }
 }
