@@ -351,6 +351,9 @@ body {
   border-color: rgba(209, 213, 219, 0.9);
   color: #111827;
   text-decoration: none;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .vh-btn-secondary:hover {
@@ -868,7 +871,7 @@ body {
   }
 
   .vh-hero-inner {
-    padding: 0;
+    padding: 12px;
     border-radius: 0;
     background: none;
     border: none;
@@ -2530,105 +2533,4 @@ body {
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
-}
-
-/*.  phonpe dummy */
-
-/* Container to keep it centered */
-.vh-featured-project {
-  padding: 2rem 1.5rem;
-  max-width: 1320px;
-  margin: 0 auto;
-}
-
-/* The wrapper that holds the image and cuts the rounded corners */
-.vh-featured-project-inner {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  /* You can make this taller or shorter */
-  border-radius: 1.5rem;
-  overflow: hidden;
-}
-
-.vh-featured-image {
-  object-fit: cover;
-}
-
-/* The secret trick: A dark gradient that fades from the bottom up */
-.vh-featured-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
-  z-index: 1;
-}
-
-
-
-
-
-/* Make it look good on mobile too */
-@media (max-width: 768px) {
-  .vh-featured-project {
-    padding: 0.5rem 1rem;
-    /* 0.5rem top/bottom, 1rem left/right */
-  }
-
-  .vh-featured-project-inner {
-    height: 450px;
-
-  }
-
-  .vh-featured-content {
-    bottom: 2rem;
-    left: 2rem;
-  }
-
-  .vh-featured-title {
-    font-size: 2rem;
-  }
-
-  o.vh-featured-image {
-    object-fit: contain;
-    /* This tells the image to fit inside the box without cutting off */
-  }
-
-}
-
-/* Make it look perfect on mobile devices */
-@media (max-width: 768px) {
-  .vh-featured-project {
-    padding: 1rem;
-    /* Less padding so the image is wider */
-  }
-
-  .vh-featured-project-inner {
-    height: 350px;
-    /* Shorter height so it fits on phone screens */
-    border-radius: 1rem;
-    /* Slightly smaller curves for mobile */
-  }
-
-  .vh-featured-content {
-    bottom: 1.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    /* Prevents text from going off the right edge */
-  }
-
-  .vh-featured-title {
-    font-size: 1.8rem;
-    /* Smaller title for phone */
-  }
-
-  .vh-featured-label {
-    font-size: 0.65rem;
-  }
-
-  .vh-featured-location {
-    font-size: 0.95rem;
-  }
 }
