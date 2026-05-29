@@ -33,11 +33,7 @@ const Portfolio = () => {
                     <div className="vh-featured-overlay"></div>
 
                     {/* The Text content at the bottom left */}
-                    <div className="vh-featured-content">
-                        <span className="vh-featured-label">FEATURED PROJECT</span>
-                        <h2 className="vh-featured-title">Contemporary Luxury Living</h2>
-                        <p className="vh-featured-location">Beverly Hills, CA</p>
-                    </div>
+
                 </div>
             </section>
 
