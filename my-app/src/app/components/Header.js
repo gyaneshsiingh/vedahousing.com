@@ -82,8 +82,8 @@ const Header = () => {
                             {pathname !== '/interior' && (
                                 <a href="/interior" className='vh-nav-link'>Interior</a>
                             )}
-                            {pathname !== '/phonepe' && (
-                                <a href="/phonepe" className='vh-nav-link'>Phonepe</a>
+                            {pathname !== '/portfolio' && (
+                                <a href="/portfolio" className='vh-nav-link'>Portfolio</a>
                             )}
                         </nav>
                         <div className="vh-auth">
@@ -152,9 +152,9 @@ const Header = () => {
                                     🏠 Interior
                                 </a>
                             )}
-                            {pathname !== '/phonepe' && (
-                                <a href="/phonepe" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
-                                    Phonepe
+                            {pathname !== '/portfolio' && (
+                                <a href="/portfolio" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
+                                    Portfolio
                                 </a>
                             )}
                         </nav>
