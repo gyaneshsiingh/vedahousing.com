@@ -2612,3 +2612,38 @@ body {
     font-size: 2rem;
   }
 }
+
+/* Make it look perfect on mobile devices */
+@media (max-width: 768px) {
+  .vh-featured-project {
+    padding: 1rem;
+    /* Less padding so the image is wider */
+  }
+
+  .vh-featured-project-inner {
+    height: 350px;
+    /* Shorter height so it fits on phone screens */
+    border-radius: 1rem;
+    /* Slightly smaller curves for mobile */
+  }
+
+  .vh-featured-content {
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    /* Prevents text from going off the right edge */
+  }
+
+  .vh-featured-title {
+    font-size: 1.8rem;
+    /* Smaller title for phone */
+  }
+
+  .vh-featured-label {
+    font-size: 0.65rem;
+  }
+
+  .vh-featured-location {
+    font-size: 0.95rem;
+  }
+}
