@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Phonepe from "../components/Phonepe";
+import Portfolio from "../components/Portfolio";
 
 
 const Port = () => {
@@ -10,7 +10,7 @@ const Port = () => {
             <Header />
 
             <div className="pt-24">
-                <Phonepe />
+                <Portfolio />
             </div>
 
             <Footer />
