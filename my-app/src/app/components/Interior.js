@@ -1,6 +1,5 @@
 import React from "react";
-import Image
-    from "next/image";
+import Image from "next/image";
 const Interior = () => {
     const Interiors = [
         {
@@ -17,6 +16,24 @@ const Interior = () => {
             title: "Precise Execution",
             desc: "We handle every detail with care, ensuring your project is completed smoothly, on time, and within budget",
             icon: "/ruler.png"
+        }
+    ];
+
+    const styles = [
+        {
+            image: "/d1.png",
+            title: "Contemporary Minimalism",
+            desc: "Clean lines, neutral palettes, and sophisticated materials create spaces that exude modern luxury."
+        },
+        {
+            image: "/d3.png",
+            title: "Minimalist Serenity",
+            desc: "Less is more. Thoughtfully curated spaces that prioritize function, light, and tranquility."
+        },
+        {
+            image: "/d4.png",
+            title: "Warm Modernism",
+            desc: "Blending warmth and texture with contemporary design for inviting, livable interiors."
         }
     ];
 
@@ -44,6 +61,30 @@ const Interior = () => {
                 </div>
             </section>
 
+            <section className="vh-interior-center-image">
+                <div className="vh-interior-center-inner-image">
+                    <Image
+                        src="/center.png"
+                        alt="center-image"
+                        width={1320}
+                        height={600}
+
+                        className="vh-interior-center-img"
+                    />
+                </div>
+
+                {/* <div className="vh-interior-overlay"></div>
+
+                <div className="vh-interior-content">
+                    <p className="vh-interior-feat">
+                        featured Project
+                    </p>
+                    <h2 className="vh-interior-center-title">Contemporary Modern Kitchen</h2>
+                    <p className="ch-interior-desc">
+                        A sleek, modern kitchen featuring clean lines, premium finishes, and smart storage solutions for a
+                    </p>
+                </div> */}
+            </section>
             <section className="vh-approach-section">
                 <div className="vh-approach-inner">
                     <h1 className="vh-approach-title">
@@ -71,6 +112,41 @@ const Interior = () => {
                     ))}
                 </div>
 
+            </section>
+
+            <section className="vh-design-styles">
+                <div className="vh-design-styles-header">
+                    <h2 className="vh-design-styles-title">
+                        Design Styles
+                    </h2>
+                    <p className="vh-design-styles-desc">
+                        From contemporary minimalism to warm modernism, we specialize in creating spaces that resonate with your aesthetic.
+                    </p>
+                </div>
+
+                <div className="vh-design-styles-grid">
+                    {styles.map((style, index) => (
+                        <div key={index} className="vh-style-card">
+                            <div className="vh-style-img-container">
+                                <Image
+                                    src={style.image}
+                                    alt="style image"
+                                    fill
+                                    className="vh-style-img" />
+
+                            </div>
+
+                            <div className="vh-style-text-content">
+                                <h3 className="vh-style-card-title">
+                                    {style.title}
+                                </h3>
+                                <p className="vh-style-card-desc">
+                                    {style.desc}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </section>
 
             <section className="vh-cta-section" id="schedule-consultation">

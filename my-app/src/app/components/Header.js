@@ -139,17 +139,17 @@ const Header = () => {
                         <nav className="vh-mobile-menu-nav">
                             {pathname !== '/' && (
                                 <a href="/" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
-                                    🏠 Home
+                                    Home
                                 </a>
                             )}
                             {pathname !== '/properties' && (
                                 <a href="/properties" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
-                                    🔍  Properties
+                                    Properties
                                 </a>
                             )}
                             {pathname !== '/interior' && (
                                 <a href="/interior" className="vh-mobile-menu-link" onClick={() => setMenuOpen(false)}>
-                                    🏠 Interior
+                                    Interior
                                 </a>
                             )}
                             {pathname !== '/portfolio' && (
