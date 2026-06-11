@@ -1,24 +1,27 @@
 import React from "react";
 import Image from "next/image";
 
+
 const PROFILE_DATA = {
     name: "Deen Dayal Singh",
-    title: "Architect",
+    title: "Structural Engineer",
     description: [
-        "Deen Dayal Singh is a highly experienced architect with over 28 years of expertise in designing and delivering exceptional built environments. Known for his deep understanding of architectural principles and practical execution, he has successfully led a wide range of residential, commercial, and large-scale infrastructure projects.",
-        "With a career defined by precision, innovation, and client-focused solutions, he brings a balanced approach that integrates functionality, sustainability, and timeless design. His extensive experience allows him to transform complex ideas into well-structured, efficient, and aesthetically refined spaces."
+        "Deen Dayal Singh is a highly experienced structural engineer with over 28 years of expertise in construction, structural design, and real estate development. With a strong foundation in engineering principles and on-site execution, he has successfully delivered a wide range of residential, commercial, and infrastructure projects.",
+
+        "Specializing in structural planning, AutoCAD design, and project execution, he ensures safety, durability, and efficiency in every project. His extensive experience enables him to transform architectural concepts into structurally sound and reliable developments while maintaining cost-effectiveness and timely delivery."
     ],
     expertise: [
-        { label: "Architectural Planning & Design" },
-        { label: "Large-Scale Residential & Commercial Projects" },
-        { label: "Project Management & Execution" },
-        { label: "Sustainable & Functional Design" },
-        { label: "Client Consultation & Design Strategy" }
+        { label: "Structural Design & Analysis" },
+        { label: "Construction Planning & Execution" },
+        { label: "AutoCAD & Technical Drawings" },
+        { label: "Real Estate Development" },
+        { label: "Site Supervision & Project Management" }
     ],
     yearsExperience: 28,
     imageSrc: "/image.png"
 
 };
+
 
 const Profile = () => {
     return (
