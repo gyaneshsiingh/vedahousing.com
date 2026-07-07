@@ -1,59 +1,97 @@
-# VedaHousing
+# VedaHousing 🏡✨
 
-VedaHousing is a modern, premium web application built with [Next.js](https://nextjs.org/) and React. It serves as the digital storefront for VedaHousing's comprehensive services, encompassing Real Estate, Interior Design, Consulting, and Architecture in Varanasi.
+> Premium Real Estate, Interior Design, Architecture & Consulting Services in Varanasi.
 
-## 🚀 Technologies Used
+A modern, high-performance portfolio and business website for **VedaHousing**, built to showcase premium properties, interior design projects, architectural solutions, and facilitate client consultations.
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Library**: [React](https://reactjs.org/)
-- **Styling**: Vanilla CSS & CSS Modules (Custom Design System without Tailwind)
-- **Backend/Services**: [Firebase](https://firebase.google.com/)
-- **Analytics & Performance**: [@vercel/speed-insights](https://vercel.com/docs/speed-insights)
-- **SEO**: Dynamic metadata & `next-sitemap` for automated sitemap generation
+![VedaHousing](/arc.webp)
 
-## ✨ Key Features
+## 🌐 Live Website
+**[https://www.vedahousing.com](https://www.vedahousing.com)**
 
-- **Dynamic Hero Sections**: Visually stunning, responsive hero layouts with beautiful radial gradients, micro-animations, and glowing accents.
-- **Service Portfolios**: Dedicated pages for Interior Design, Architecture, and Real Estate.
-- **Optimized SEO**: Server-side rendering (SSR) and semantic HTML with fully automated `sitemap.xml` and `robots.txt` generation.
-- **Custom CSS Architecture**: A scalable, class-based custom CSS system (`globals.css`) ensuring high-performance styling without heavy CSS frameworks.
-- **Fully Responsive**: Flawless experience across desktop, tablet, and mobile devices with interactive hamburger navigation.
+---
 
-## 🛠️ Getting Started
+## 🛠 Tech Stack
 
-First, ensure you have Node.js installed on your machine.
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: Vanilla CSS (Global & Modular CSS for component-level scoping)
+- **Backend**: [Firebase](https://firebase.google.com/)
+- **Deployment**: [Vercel](https://vercel.com/)
+- **Icons/Fonts**: Google Fonts, custom SVGs
 
-1. **Clone the repository and install dependencies:**
-   ```bash
-   npm install
-   ```
+---
 
-2. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
+## 🚀 Getting Started
 
-3. **Open the application:**
-   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Follow these instructions to run the project locally.
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) and `npm` installed on your machine.
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/vedahousing.git
+cd vedahousing
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Run the Development Server
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the local environment. The page will automatically hot-reload as you make edits to the code.
+
+---
 
 ## 📁 Project Structure
 
-- `/src/app` - Contains the main Next.js App Router pages (`page.tsx`, `layout.tsx`, `sitemap.ts`).
-- `/src/app/components` - Reusable UI components (Header, Footer, Hero, Services, Interior, etc.). Each component typically has its own `.tsx` file, `.constants.ts` for data, and `.type.ts` for TypeScript interfaces.
-- `/src/app/globals.css` - Global CSS tokens, utilities, and standard layout classes.
+The project follows a component-driven architecture using the Next.js App Router:
 
-## 📦 Build for Production
-
-To create an optimized production build:
-
-```bash
-npm run build
+```text
+├── src/
+│   ├── app/
+│   │   ├── components/            # Reusable UI components
+│   │   │   ├── Header/            # Sticky top navigation
+│   │   │   ├── Footer/            # Global footer navigation
+│   │   │   ├── Hero/              # Main landing hero section
+│   │   │   ├── Services/          # Service cards & routing
+│   │   │   ├── Interior/          # Interior design features & styles
+│   │   │   ├── PropertiesSection/ # Property listings & showcases
+│   │   │   ├── Portfolio/         # Architectural and design portfolios
+│   │   │   └── ContactCTA/        # Call-to-action & outreach blocks
+│   │   │
+│   │   ├── globals.css            # Global styles, variables, and typography
+│   │   ├── layout.tsx             # Root HTML layout and global SEO metadata
+│   │   ├── page.tsx               # Main homepage composition
+│   │   └── sitemap.ts             # Automated sitemap for SEO indexing
+│   │
+│   ├── public/                    # Static assets (images, webp, SVGs)
+│   └── next.config.mjs            # Next.js configuration
 ```
 
-This will automatically trigger the `postbuild` script which generates the `sitemap.xml` for SEO indexing.
+---
 
-To start the production server:
+## 📈 SEO & Performance
+- **Optimized Core Web Vitals**: Modern image formats (`.webp`) and lazy loading.
+- **Dynamic Meta Tags**: Full OpenGraph and metadata optimization for rich sharing.
+- **Mobile First**: Fully responsive layouts optimized for all viewport sizes with interactive hamburger navigation.
+- **Analytics**: `@vercel/speed-insights` integrated for real-time performance monitoring.
 
-```bash
-npm run start
-```
+---
+
+## 📞 Contact Integration
+The website features seamless integration for client outreach:
+- **WhatsApp**: Direct chat links for fast communication.
+- **Direct Call/SMS**: `tel:` and `sms:` URI handlers for instant mobile dialing.
+- **Email**: Pre-filled web client drafting via `mailto:` links.
+
+---
+
+## 📝 License
+This project is proprietary and meant for the sole use of **VedaHousing**. All rights reserved.
