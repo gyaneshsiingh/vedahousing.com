@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react'
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore'
 import { db } from '@/firebase/config'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import PropertyCard from '../components/PropertyCard'
-import PropertyFilters from '../components/PropertyFilters'
+import Header from '../components/Header/header'
+import Footer from '../components/Footer/footer'
+import PropertyCard from '../components/PropertyCard/propertyCard'
+import PropertyFilters from '../components/PropertyFilters/propertyFilters'
 
 export default function PropertiesPage() {
     const [properties, setProperties] = useState([])

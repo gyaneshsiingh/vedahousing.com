@@ -1,11 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
+
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
 import { db } from '@/firebase/config'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../components/Header/header'
+import Footer from '../components/Footer/footer'
 export default function ContactPage() {
     const [form, setForm] = useState({ name: '', phone: '', message: '' })
     const [status, setStatus] = useState('idle') // idle | loading | success | error

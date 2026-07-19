@@ -1,0 +1,246 @@
+.vh-profile-main {
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 80px 28px;
+    perspective: 1320px;
+}
+
+.vh-profile-section {
+    background: #f9fafb;
+}
+
+.vh-profile-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.vh-profile-maintitle {
+    font-size: 40px;
+    color: #0f172a;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.vh-profile-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    color: #0b1121;
+    line-height: 1.6;
+}
+
+.vh-profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    transform: rotateX(20deg) rotateY(-10deg) scale(0.9);
+    opacity: 0;
+    transition: transform 2s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 1s ease;
+}
+
+.vh-profile-grid.vh-revealed {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+    opacity: 1;
+}
+
+.vh-profile-image-container {
+    position: relative;
+    border-radius: 24px;
+}
+
+.vh-profile-image-wrapper {
+    border-radius: 24px;
+    position: relative;
+}
+
+.vh-profile-img {
+    border-radius: 24px;
+    object-fit: cover;
+    display: block;
+}
+
+.vh-profile-badge {
+    position: absolute;
+    bottom: -32px;
+    right: -32px;
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+
+
+.vh-badge-number {
+    font-size: 48px;
+    font-weight: 600;
+    color: #0f172a;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.vh-badge-text {
+    font-size: 16px;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.vh-profile-name {
+    font-size: 52px;
+    color: #0f172a;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.vh-profile-title {
+    font-size: 16px;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 40px;
+}
+
+.vh-profile-description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #0b1121;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.vh-expertise-heading {
+    font-size: 12px;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+}
+
+.vh-expertise-pills {
+    list-style-type: disc;
+    margin-bottom: 32px;
+    color: #0b1121;
+
+}
+
+.vh-pill {
+    display: list-item;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.vh-profile-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.vh-btn-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 40px;
+    background: transparent;
+    color: #0b1121;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.vh-btn-linkedin:hover {
+    border-color: #0f172a;
+    background: #f8fafc;
+    transform: translate(-2px);
+}
+
+.vh-btn-get-touch {
+    display: inline-block;
+    padding: 16px 40px;
+    background: #335154;
+    color: white;
+    border-radius: 999px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.vh-btn-get-touch:hover {
+    background: #335154;
+    transform: translate(-2px);
+    box-shadow: 0 10px 20px rgba(51, 81, 84, 0.6);
+}
+
+@media (max-width:960px) {
+    .vh-profile-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .vh-profile-badge {
+        bottom: -32px;
+        right: 32px;
+
+    }
+
+    .vh-profile-name {
+        font-size: 40px;
+    }
+
+    .vh-profile-maintitle {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:600px) {
+    .vh-profile-badge {
+        bottom: -56px;
+        right: -12px;
+        min-width: auto;
+        padding: 16px 24px;
+    }
+
+    .vh-profile-description {
+        text-align: unset;
+    }
+
+    .vh-badge-number {
+        font-size: 40px;
+    }
+
+    .vh-profile-img {
+        height: 450px;
+        width: 100%;
+    }
+
+    .vh-profile-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .vh-btn-linkedin,
+    .vh-btn-get-touch {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+}

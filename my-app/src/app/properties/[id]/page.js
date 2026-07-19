@@ -3,8 +3,8 @@
 import { useEffect, useState, use } from 'react'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '@/firebase/config'
-import Header from '@/app/components/Header'
-import Footer from '@/app/components/Footer'
+import Header from '@/app/components/Header/header'
+import Footer from '@/app/components/Footer/footer'
 import { useRouter } from 'next/navigation'
 
 export default function PropertyDetail({ params }) {

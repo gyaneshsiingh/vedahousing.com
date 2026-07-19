@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VedaHousing 🏡✨
 
-## Getting Started
+> Premium Real Estate, Interior Design, Architecture & Consulting Services in Varanasi.
 
-First, run the development server:
+A modern, high-performance portfolio and business website for **VedaHousing**, built to showcase premium properties, interior design projects, architectural solutions, and facilitate client consultations.
 
+![VedaHousing](/arc.webp)
+
+## 🌐 Live Website
+**[https://www.vedahousing.com](https://www.vedahousing.com)**
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: Vanilla CSS (Global & Modular CSS for component-level scoping)
+- **Backend**: [Firebase](https://firebase.google.com/)
+- **Deployment**: [Vercel](https://vercel.com/)
+- **Icons/Fonts**: Google Fonts, custom SVGs
+
+---
+
+## 🚀 Getting Started
+
+Follow these instructions to run the project locally.
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) and `npm` installed on your machine.
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/vedahousing.git
+cd vedahousing
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Run the Development Server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the local environment. The page will automatically hot-reload as you make edits to the code.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project follows a component-driven architecture using the Next.js App Router:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+├── src/
+│   ├── app/
+│   │   ├── components/            # Reusable UI components
+│   │   │   ├── Header/            # Sticky top navigation
+│   │   │   ├── Footer/            # Global footer navigation
+│   │   │   ├── Hero/              # Main landing hero section
+│   │   │   ├── Services/          # Service cards & routing
+│   │   │   ├── Interior/          # Interior design features & styles
+│   │   │   ├── PropertiesSection/ # Property listings & showcases
+│   │   │   ├── Portfolio/         # Architectural and design portfolios
+│   │   │   └── ContactCTA/        # Call-to-action & outreach blocks
+│   │   │
+│   │   ├── globals.css            # Global styles, variables, and typography
+│   │   ├── layout.tsx             # Root HTML layout and global SEO metadata
+│   │   ├── page.tsx               # Main homepage composition
+│   │   └── sitemap.ts             # Automated sitemap for SEO indexing
+│   │
+│   ├── public/                    # Static assets (images, webp, SVGs)
+│   └── next.config.mjs            # Next.js configuration
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📈 SEO & Performance
+- **Optimized Core Web Vitals**: Modern image formats (`.webp`) and lazy loading.
+- **Dynamic Meta Tags**: Full OpenGraph and metadata optimization for rich sharing.
+- **Mobile First**: Fully responsive layouts optimized for all viewport sizes with interactive hamburger navigation.
+- **Analytics**: `@vercel/speed-insights` integrated for real-time performance monitoring.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📞 Contact Integration
+The website features seamless integration for client outreach:
+- **WhatsApp**: Direct chat links for fast communication.
+- **Direct Call/SMS**: `tel:` and `sms:` URI handlers for instant mobile dialing.
+- **Email**: Pre-filled web client drafting via `mailto:` links.
+
+---
+
+## 📝 License
+This project is proprietary and meant for the sole use of **VedaHousing**. All rights reserved.

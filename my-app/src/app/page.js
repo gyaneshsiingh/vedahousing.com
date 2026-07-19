@@ -1,13 +1,21 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Footer from './components/Footer'
+import Header from './components/Header/header'
+import Hero from './components/Hero/hero'
+import Stats from './components/Stats/stats'
+import Services from './components/Services/services'
+import ContactCTA from './components/ContactCTA/contactCTA'
+import Footer from './components/Footer/footer'
+import StickWidget from './components/widget/widget'
 
-export default function Page() {
+export default function Home() {
   return (
-    <div className="vh-app">
+    <main>
       <Header />
       <Hero />
+      <Stats />
+      <Services />
+      <ContactCTA />
+      <StickWidget />
       <Footer />
-    </div>
+    </main>
   )
 }
