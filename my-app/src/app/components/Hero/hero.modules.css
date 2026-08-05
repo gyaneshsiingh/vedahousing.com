@@ -19,7 +19,7 @@
 }
 
 .vh-hero-content {
-    padding-top: 40px;
+
     max-width: 560px;
     grid-area: text;
     align-self: end;
@@ -208,4 +208,7 @@
         box-sizing: border-box;
     }
 
+    .vh-hero-content {
+        padding-top: 40px;
+    }
 }

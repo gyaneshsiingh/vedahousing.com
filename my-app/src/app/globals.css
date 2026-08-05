@@ -237,7 +237,13 @@ body {
 .vhl-header {
   text-align: center;
   margin-bottom: 2.5rem;
-  padding-top: 80px;
+
+}
+
+@media (max-width:600px) {
+  .vhl-header {
+    padding-top: 40px;
+  }
 }
 
 .vhl-title {
@@ -1121,7 +1127,13 @@ body {
 
   width: 100%;
   box-sizing: border-box;
-  padding-top: 80px;
+
+}
+
+@media (max-width:600px) {
+  .pd-container {
+    padding-top: 40px;
+  }
 }
 
 .pd-back-btn {
