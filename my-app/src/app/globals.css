@@ -1104,7 +1104,7 @@ body {
 
 /* ─── Property Details Page ───────────────────────────────── */
 .pd-main {
-  min-height: 60vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1118,7 +1118,7 @@ body {
 .pd-container {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 40px 28px;
+
   width: 100%;
   box-sizing: border-box;
   padding-top: 80px;
