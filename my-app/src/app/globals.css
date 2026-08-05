@@ -1118,9 +1118,10 @@ body {
 .pd-container {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 3rem 28px;
+  padding: 40px 28px;
   width: 100%;
   box-sizing: border-box;
+  padding-top: 80px;
 }
 
 .pd-back-btn {
