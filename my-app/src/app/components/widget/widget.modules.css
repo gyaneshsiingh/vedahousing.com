@@ -24,10 +24,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 18px 50px rgba(249, 115, 22, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    background: linear-gradient(to right, #f97316, #ea580c);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    background-color: #B1764E;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
 }
 
 .vh-sticky-menu {

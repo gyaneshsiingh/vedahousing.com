@@ -101,7 +101,7 @@ export default function UploadProperty() {
         <div className="admin-page">
             <header className="admin-topbar">
                 <div className="admin-topbar-inner">
-                    <img src="/veda_logo.png" alt="Vedahousing" className="admin-topbar-logo" />
+                    <img src="/logo.svg" alt="Vedahousing" className="admin-topbar-logo" />
                     <Link href="/admin/dashboard" className="admin-btn-logout">← Back</Link>
                 </div>
             </header>

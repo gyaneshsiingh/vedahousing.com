@@ -1,18 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import { INTERIOR_CONSTANTS, STYLE_CONSTANTS } from './interior.constants';
+import "./interior.modules.css"
+import "../Contact/contact.modules.css"
+import "../Hero/hero.modules.css"
 import Profile from "../Profile/profile";
-
 const Interior = () => {
+
 
     return (
         <>
             <section className="vh-hero">
                 <div className="vh-hero-inner">
                     <div className="vh-hero-content">
-                        <span className="vh-eyebrow">
+                        <p className="vh-eyebrow">
                             Elevating Spaces, Redefining Style.
-                        </span>
+                        </p>
                         <h1 className="vh-title">
                             Elevating Everyday <br /> Living
                         </h1>
@@ -26,7 +29,7 @@ const Interior = () => {
                         <div className="vh-card-main">
                             <div className="vh-card-image-wrapper">
                                 <Image
-                                    src="/cen.webp"
+                                    src="/int-hero.webp"
                                     alt="center-image"
                                     className="vh-card-img-fit"
                                     width={520}
@@ -36,6 +39,20 @@ const Interior = () => {
                                 />
                             </div>
                         </div>
+                    </div>
+
+                    <div className="vh-actions">
+                        <a
+                            href="https://wa.me/919455664970?text=Hi%20Deen Dayal Singh%2C%20I%20would%20like%20a%20consultation"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="vh-primary-btn"
+                        >
+                            Start Your Project
+
+                        </a>
+
+
                     </div>
 
 
@@ -72,44 +89,46 @@ const Interior = () => {
             </section>
 
             <section className="vh-design-styles">
-                <div className="vh-design-styles-header">
-                    <h2 className="vh-design-styles-title">
-                        Design Styles
-                    </h2>
-                    <p className="vh-design-styles-desc">
-                        From contemporary minimalism to warm modernism, we specialize in creating spaces that resonate with your aesthetic.
-                    </p>
-                </div>
+                <div className="vh-design-styles-inner">
+                    <div className="vh-design-styles-header">
+                        <h1 className="vh-design-styles-title">
+                            Design Styles
+                        </h1>
+                        <p className="vh-design-styles-desc">
+                            From contemporary minimalism to warm modernism, we specialize in creating spaces that resonate with your aesthetic.
+                        </p>
+                    </div>
 
-                <div className="vh-design-styles-grid">
-                    {STYLE_CONSTANTS.map((style, index) => (
-                        <div key={index} className="vh-style-card">
-                            <div className="vh-style-img-container">
-                                <Image
-                                    src={style.image}
-                                    alt="style image"
-                                    fill
-                                    className="vh-style-img" />
 
+                    <div className="vh-design-styles-grid">
+                        {STYLE_CONSTANTS.map((style, index) => (
+                            <div key={index} className="vh-style-card">
+                                <div className="vh-style-img-container">
+                                    <Image
+                                        src={style.image}
+                                        alt="style image"
+                                        fill
+                                        className="vh-style-img" />
+
+                                </div>
+
+                                <div className="vh-style-text-content">
+                                    <h3 className="vh-style-card-title">
+                                        {style.title}
+                                    </h3>
+                                    <p className="vh-style-card-desc">
+                                        {style.desc}
+                                    </p>
+                                </div>
                             </div>
-
-                            <div className="vh-style-text-content">
-                                <h3 className="vh-style-card-title">
-                                    {style.title}
-                                </h3>
-                                <p className="vh-style-card-desc">
-                                    {style.desc}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </section>
+
             <section>
                 <Profile />
             </section>
-
-
 
             <section className="vh-cta-section" id="schedule-consultation">
                 <div className="vh-cta-container">

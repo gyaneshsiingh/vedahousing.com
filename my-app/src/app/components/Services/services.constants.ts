@@ -4,29 +4,29 @@ export const SERVICES_CONSTANTS: ServiceType[] = [
     {
         title: "Real Estate",
         desc: "Premium property solutions for buying, selling, & renting.",
-        image: "/card1.webp",
-        icon: "/home.png",
-        href: "/properties"
+        image: "/service-home.webp",
+        icon: "/home.svg",
+
     },
     {
         title: "Interior Design",
         desc: "Stunning interior space blend aesthetics and functionality.",
-        image: "/inter.webp",
-        icon: "/int.png",
-        href: "/interior"
+        image: "/service-int.webp",
+        icon: "/sofa.svg",
+
     },
     {
         title: "Consulting",
         desc: "Strategic guidance for property development.",
-        image: "/cons.webp",
-        icon: "/cons.png",
-        href: "/portfolio"
+        image: "/service-cons.webp",
+        icon: "/people.svg",
+
     },
     {
         title: "Architecture",
         desc: "Innovative architectural design creating timeless structures.",
         image: "/arc.webp",
-        icon: "/arc.png",
-        href: "/portfolio"
+        icon: "/des.svg",
+
     }
 ];

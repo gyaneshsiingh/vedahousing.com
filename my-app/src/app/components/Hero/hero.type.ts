@@ -1,3 +1,5 @@
-export interface HeroProps {
-  // Add props here
+export interface HeroButtonType {
+    label: string,
+    href: string,
+    style: string
 }

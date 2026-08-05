@@ -7,6 +7,7 @@ import Header from '@/app/components/Header/header'
 import Footer from '@/app/components/Footer/footer'
 import { useRouter } from 'next/navigation'
 
+
 export default function PropertyDetail({ params }) {
     const router = useRouter();
     const [property, setProperty] = useState(null);

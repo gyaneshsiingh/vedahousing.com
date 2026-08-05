@@ -11,11 +11,20 @@ const PrivacyPolicyPage = () => {
     return (
         <main>
             <Header />
-            <div className="pt-32 pb-20 px-8 min-h-[60vh] flex flex-col items-center justify-center text-center">
-                <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
-                <p className="text-lg text-gray-600 max-w-2xl">
-                    Our privacy policy documentation is being finalized. Check back soon.
-                </p>
+            <div className="legal-page-wrapper">
+                <div className="legal-page-inner">
+                    <div className="legal-page-icon">🔒</div>
+                    <h1 className="legal-page-title">Privacy Policy</h1>
+                    <p className="legal-page-subtitle">Last updated: August 2025</p>
+                    <div className="legal-page-card">
+                        <p className="legal-page-body">
+                            Our privacy policy documentation is being finalized. We are committed to protecting your personal information and your right to privacy.
+                        </p>
+                        <p className="legal-page-body">
+                            If you have any questions about our privacy practices in the meantime, please contact us at <a href="mailto:vedahousing@gmail.com" className="legal-page-link">vedahousing@gmail.com</a>.
+                        </p>
+                    </div>
+                </div>
             </div>
             <Footer />
         </main>

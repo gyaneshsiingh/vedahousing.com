@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { AnimatedStat } from "../Stats/stats";
+import { AnimatedStat } from "../Stats/stats"
 import "./portfolio.modules.css";
 
 const PORTFOLIO_DATA = {
@@ -19,7 +19,7 @@ const PORTFOLIO_DATA = {
         { label: "Site Supervision & Project Management" }
     ],
     yearsExperience: 28,
-    imageSrc: "/image.png"
+    imageSrc: "/image.webp"
 };
 
 

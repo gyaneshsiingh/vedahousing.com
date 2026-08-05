@@ -16,9 +16,9 @@ export const metadata = {
     template: "%s | Vedahousing",
   },
   icons: {
-    icon: "/veda_logo.png",
-    shortcut: "/veda_logo.png",
-    apple: "/veda_logo.png",
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
   },
   description:
     "Browse verified property listings in Varanasi. Buy or rent apartments, get interior design services, and book in-person or virtual tours. Zero hidden charges.",

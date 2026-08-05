@@ -1,46 +1,53 @@
 .vh-stats {
-  background: #ffffff;
-  /* padding: 2rem 1.5rem; */
+    background: #ffffff;
+    /* padding: 2rem 1.5rem; */
 
-  border-top: 1px solid #f1f5f9;
-  border-bottom: 1px solid #f1f5f9;
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
 }
 
 .vh-stats-inner {
-  padding: 40px 28px;
-  max-width: 1320px;
-  width: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  text-align: center;
+    padding: 40px 28px;
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: center;
 }
 
 .vh-stat-number {
-  font-size: 3rem;
-  font-weight: 600;
-  color: black;
-  margin-bottom: 0.8px;
+    font-size: 3rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 0.8px;
 
-  letter-spacing: -.02em;
+    letter-spacing: -.02em;
 }
 
 .vh-stat-label {
-  font-size: 16px;
-  color: #64748b;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
+    font-size: 16px;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
 }
 
 @media (max-width: 768px) {
-  .vh-stats-inner {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem 1rem;
-  }
+    .vh-stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 1rem;
+    }
 
-  .vh-stat-number {
-    font-size: 2.2rem;
-  }
+    .vh-stat-number {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vh-stats-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }

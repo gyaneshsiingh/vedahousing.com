@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../components/Header/header";
 import Footer from "../components/Footer/footer";
 import Portfolio from "../components/Portfolio/portfolio";
-
 import Stats from "../components/Stats/stats";
 
 export const metadata = {

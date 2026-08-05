@@ -3,5 +3,5 @@ export interface ServiceType {
     desc: string;
     image: string;
     icon: string;
-    href: string;
+
 }

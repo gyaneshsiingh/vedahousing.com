@@ -22,16 +22,19 @@ export const STYLE_CONSTANTS: StyleType[] = [
     {
         image: "/d1.webp",
         title: "Living Room",
-        desc: "Elegant, functional living spaces designed to reflect your personality and create a warm, welcoming atmosphere."
+        desc: "Elegant, functional living spaces designed to reflect your personality and create a warm, welcoming atmosphere.",
+        pdfUrl: "/liv.pdf"
     },
     {
         image: "/d2.webp",
         title: "Wardrobe",
-        desc: "Custom wardrobe solutions that maximize storage, blend seamlessly with your interiors, and bring order to your life."
+        desc: "Custom wardrobe solutions that maximize storage, blend seamlessly with your interiors, and bring order to your life.",
+        pdfUrl: "/war.pdf"
     },
     {
         image: "/d3.webp",
         title: "Kitchen",
-        desc: "Modern kitchens crafted for efficiency and style — where great cooking and beautiful design come together."
+        desc: "Modern kitchens crafted for efficiency and style — where great cooking and beautiful design come together.",
+        pdfUrl: "/kit.pdf"
     }
 ];

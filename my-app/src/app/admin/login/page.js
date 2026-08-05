@@ -31,7 +31,7 @@ export default function AdminLogin() {
         <div className="admin-login-page">
             <div className="admin-login-card">
                 <div className="admin-login-logo">
-                    <img src="/veda_logo.png" alt="Vedahousing" className="admin-logo-img" />
+                    <img src="/logo.svg" alt="Vedahousing" className="admin-logo-img" />
                 </div>
 
                 <h1 className="admin-login-title">Admin Access</h1>

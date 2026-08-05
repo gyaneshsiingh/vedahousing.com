@@ -7,6 +7,7 @@ import PropertyCard from '../PropertyCard/propertyCard'
 import PropertyFilters from '../PropertyFilters/propertyFilters'
 
 
+
 const PAGE_SIZE = 3
 
 export default function PropertiesSection() {

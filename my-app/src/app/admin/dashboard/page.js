@@ -71,7 +71,7 @@ export default function AdminDashboard() {
             <header className="admin-topbar">
                 <div className="admin-topbar-inner">
                     <div className="admin-topbar-left">
-                        <img src="/veda_logo.png" alt="Vedahousing" className="admin-topbar-logo" />
+                        <img src="/logo.svg" alt="Vedahousing" className="admin-topbar-logo" />
                         <span className="admin-topbar-tag">Admin Panel</span>
                     </div>
                     <div className="admin-topbar-actions">

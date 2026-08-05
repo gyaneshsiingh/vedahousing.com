@@ -1,8 +1,9 @@
-'use client';
-import { useEffect, useRef } from 'react';
-import { STATS_CONSTANTS } from './stats.constants';
-import "./stats.modules.css";
+"use client"
 
+import React, { useEffect, useRef } from "react";
+import { STATS_DATA } from "./stats.constant";
+import { StatItemType } from "./stats.type";
+import "./stats.modules.css";
 
 export const AnimatedStat = ({ end, suffix }: { end: number, suffix: string }) => {
     const nodeRef = useRef<HTMLHeadingElement>(null);
@@ -19,7 +20,7 @@ export const AnimatedStat = ({ end, suffix }: { end: number, suffix: string }) =
 
             if (entry.isIntersecting && !hasAnimated.current) {
                 hasAnimated.current = true;
-                const duration = 800;
+                const duration = 1500;
 
                 const startTime = performance.now();
 
@@ -60,12 +61,12 @@ export const AnimatedStat = ({ end, suffix }: { end: number, suffix: string }) =
     return (<h2 className="vh-stat-number" ref={nodeRef}>0{suffix}</h2>
     );
 };
-const Stats = () => {
 
+const Stats = () => {
     return (
         <section className="vh-stats">
             <div className="vh-stats-inner">
-                {STATS_CONSTANTS.map((item, index) => (
+                {STATS_DATA.map((item: StatItemType, index: number) => (
                     <div key={index} className="vh-stat-item">
                         <AnimatedStat end={item.value} suffix={item.suffix} />
                         <p className="vh-stat-label">{item.label}</p>
@@ -73,7 +74,7 @@ const Stats = () => {
                 ))}
             </div>
         </section>
-    );
-};
+    )
+}
 
 export default Stats;

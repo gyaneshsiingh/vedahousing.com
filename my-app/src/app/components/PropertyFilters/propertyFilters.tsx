@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { PROPERTYFILTERS_CONSTANTS } from './propertyFilters.constants';
 
 export default function PropertyFilters({ filter, setFilter, search, setSearch }) {

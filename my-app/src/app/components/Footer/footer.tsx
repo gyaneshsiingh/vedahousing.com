@@ -1,86 +1,69 @@
 import React from "react";
 import Link from "next/link";
-import "./footer.modules.css"
+import "./footer.modules.css";
+import {
+    FOOTER_TAGLINE,
+    FOOTER_BOTTOM_META,
+    SERVICES_NAV,
+    COMPANY_NAV,
+    LEGAL_NAV,
+} from "./footer.constants";
+import { NavSection } from "./footer.type";
 
 const Footer = () => {
-    const year = new Date().getFullYear()
+    const year = new Date().getFullYear();
+
+    const renderNavSection = (section: NavSection) => (
+        <div className="vh-footer-col">
+            <h3 className="vh-footer-col-heading">{section.title}</h3>
+            <ul className="vh-footer-nav-list">
+                {section.items.map((item, index) => (
+                    <li key={index}>
+                        {item.isExternal ? (
+                            <a
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {item.label}
+                            </a>
+                        ) : (
+                            <Link href={item.href}>{item.label}</Link>
+                        )}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 
     return (
         <footer className="vh-footer" id="contact">
             <div className="vh-footer-inner">
                 <div className="vh-footer-grid">
-                    {/* NAP – critical for local SEO */}
+                    {/* Brand */}
                     <div className="vh-footer-brand">
                         <span className="vh-footer-logo">Vedahousing</span>
-                        <p className="vh-footer-tagline">
-                            Transforming spaces and creating exceptional real estate experience  since 2020.
-                        </p>
+                        <p className="vh-footer-tagline">{FOOTER_TAGLINE}</p>
                     </div>
 
-
-                    <div className="vh-footer-col" >
-                        <h3 className="vh-footer-col-heading">Services</h3>
-                        <ul className="vh-footer-nav-list">
-                            <li><Link href="/properties">Real Estate</Link></li>
-                            <li>
-                                <a
-                                    href="https://wa.me/919455664970?text=Hi%2C%20I%27m%20interested%20in%20interior%20design%20services"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Consulting
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://wa.me/919455664970?text=Hi%2C%20I%27m%20looking%20for%20property%20consulting%20in%20Varanasi"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Interior Design
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://wa.me/919455664970?text=Hi%2C%20I%27m%20interested%20in%20Vedahousing%20services"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Architecture
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className="vh-footer-col" >
-                        <h3 className="vh-footer-col-heading">Company</h3>
-                        <ul className="vh-footer-nav-list">
-                            <li><Link href="/about">About Us</Link></li>
-                            <li><Link href="/properties">Portfolio</Link></li>
-                            <li><Link href="/contact">Contact</Link></li>
-                        </ul>
-                    </div>
-                    <div className="vh-footer-col" >
-                        <h3 className="vh-footer-col-heading">Legal</h3>
-                        <ul className="vh-footer-nav-list">
-                            <li><Link href="/about">Privacy Policy</Link></li>
-                            <li><Link href="/properties">Terms of Services</Link></li>
-                            <li><Link href="/contact">Cookie Policy</Link></li>
-                        </ul>
-                    </div>
+                    {/* Navigation Columns */}
+                    {renderNavSection(SERVICES_NAV)}
+                    {renderNavSection(COMPANY_NAV)}
+                    {renderNavSection(LEGAL_NAV)}
                 </div>
-                <div className="vh-footer-divider">
-                    {/* hhh */}
-                </div>
+
+                <div className="vh-footer-divider" />
 
                 <div className="vh-footer-bottom">
                     <span>© {year} Vedahousing. All rights reserved.</span>
-                    <span className="vh-footer-bottom-meta">Varanasi&apos;s trusted property &amp; interior design experts</span>
+                    <br />
+                    <span className="vh-footer-bottom-meta">
+                        {FOOTER_BOTTOM_META}
+                    </span>
                 </div>
             </div>
         </footer>
-    )
-}
+    );
+};
 
 export default Footer;
-
