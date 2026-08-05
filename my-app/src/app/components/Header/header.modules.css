@@ -51,7 +51,16 @@
     transition: color 0.2s;
 }
 
-.vh-nav-link::after {
+/* 
+.vh-nav-link:hover,
+.vh-nav-link.active {
+    color: white;
+    background: #0f172a;
+    border-radius: 50px;
+    padding: 8px 12px;
+} */
+
+/* .vh-nav-link::after {
     content: '';
     position: absolute;
     left: 0;
@@ -61,7 +70,7 @@
     border-radius: 999px;
     background: #cdc695;
     transition: width 200ms ease-out;
-}
+} */
 
 .vh-nav-auth {
     /* display: flex; */
