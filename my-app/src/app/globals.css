@@ -4,6 +4,39 @@
   box-sizing: border-box;
 }
 
+
+
+
+.vh-title-highlight {
+  color: #B1764E;
+  -webkit-text-fill-color: inherit;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.vh-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.24rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgb(177, 118, 78);
+  margin-bottom: 1.4rem;
+}
+
+.vh-eyebrow::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgb(177, 118, 78);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.45);
+}
+
 html,
 body {
   margin: 0;
