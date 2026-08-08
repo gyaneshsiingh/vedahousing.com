@@ -1,0 +1,132 @@
+.vh-appoint {
+
+    padding: 40px 28px;
+}
+
+.vh-appoint-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.vh-appoint-title {
+    font-size: clamp(2.4rem, 1.4vw + 0.6rem, 1.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    margin: 0 0 1.1rem;
+    font-weight: 600;
+    background: #0f172a;
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    text-align: center;
+}
+
+
+
+
+.vh-name,
+.vh-ph,
+.vh-em,
+.vh-date,
+.vh-time {
+    background-color: transparent !important;
+    color: #000;
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.vh-name,
+.vh-ph,
+.vh-em,
+.vh-date,
+.vh-time {
+    width: 100%;
+    max-width: 560px;
+    height: 58px;
+    padding: 0 28px;
+    border-radius: 999px;
+    border: 1px solid #D7D7D7;
+    font-size: 16px;
+    background: #ffffff;
+}
+
+.vh-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 100%;
+    min-height: 420px;
+
+    padding: 50px 40px;
+}
+
+.vh-success h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #B1764E;
+    margin-bottom: 18px;
+}
+
+.vh-success p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    max-width: 450px;
+}
+
+.vh-success .vh-primary-btn {
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+
+    .vh-success {
+        min-height: 65vh;
+        padding: 30px 20px;
+    }
+
+    .vh-success h2 {
+        font-size: 32px;
+        margin-bottom: 14px;
+    }
+
+    .vh-success p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 14px;
+        max-width: 100%;
+    }
+
+    .vh-success .vh-primary-btn {
+        width: 100%;
+        height: 54px;
+        margin-top: 20px;
+    }
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+    max-width: 560px;
+}
+
+.react-datepicker__input-container {
+    width: 100%;
+}
+
+.react-datepicker__input-container input {
+    width: 100%;
+    box-sizing: border-box;
+}

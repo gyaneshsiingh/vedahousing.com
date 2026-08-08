@@ -1,8 +1,11 @@
-import React from "react";
+"use client"
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ContactItemType } from "./contact.type";
 import { CONTACT_INFO } from "./contact.constant";
 import "./contact.modules.css"
+
+import Appoint from "../Appointment/Appoint";
 
 const ContactCTA = () => {
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
@@ -21,6 +24,32 @@ const ContactCTA = () => {
             });
         }
     };
+    const [openAppointment, setOpenAppointment] = useState(false);
+
+    useEffect(() => {
+        if (openAppointment) {
+            const scrollY = window.scrollY;
+
+            document.body.style.position = "fixed";
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.left = "0";
+            document.body.style.right = "0";
+            document.body.style.width = "100%";
+            document.body.style.overflow = "hidden";
+
+            return () => {
+                document.body.style.position = "";
+                document.body.style.top = "";
+                document.body.style.left = "";
+                document.body.style.right = "";
+                document.body.style.width = "";
+                document.body.style.overflow = "";
+
+                window.scrollTo(0, scrollY);
+            };
+        }
+    }, [openAppointment]);
+
 
 
     return (
@@ -61,17 +90,33 @@ const ContactCTA = () => {
                     })}
                 </div>
                 <div className="vh-cta-action">
-                    <a
-                        href="https://wa.me/919455664970?text=Hi%20Vedahousing%2C%20I%20would%20like%20a%20consultation"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="vh-cta-btn"
+                    <button
+
+                        className="vh-primary-btn1"
+                        onClick={(e) => setOpenAppointment(true)}
                     >
-                        Schedule A Consultation
-                    </a>
+                        Book Your Appointment
+                    </button>
+
                 </div>
             </div>
-        </section>
+            {openAppointment && (
+                <div className="vh-appoint-overlay">
+                    <div className="vh-appoint-model">
+                        <button className="vh-close-btn" onClick={(e) => setOpenAppointment(false)}>
+                            ✕
+                        </button>
+                        <Appoint
+                            onClose={() => {
+                                // console.log("Parent onClose called");
+                                setOpenAppointment(false);
+                            }}
+                        />
+                    </div>
+                </div>
+            )}
+
+        </section >
     )
 }
 

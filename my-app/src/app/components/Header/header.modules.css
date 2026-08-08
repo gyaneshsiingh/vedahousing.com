@@ -51,6 +51,31 @@
     transition: color 0.2s;
 }
 
+.vh-contact {
+    border-radius: 50px;
+    background-color: #161C26;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.vh-contact-link {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #161C26;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px 12px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+
 /* 
 .vh-nav-link:hover,
 .vh-nav-link.active {
@@ -117,13 +142,15 @@
 
 
 @media (max-width: 720px) {
+
+    .vh-contact {
+        padding: 8px 12px;
+    }
+
     .vh-logo-desktop {
         display: none !important;
     }
 
-    .vh-contact {
-        display: none !important;
-    }
 
     .vh-nav-desktop {
         display: none !important;
@@ -135,7 +162,7 @@
     }
 
     .vh-logo-image-mobile {
-        height: 28px;
+        height: 40px;
         width: auto;
         object-fit: contain;
         margin-left: 16px;
