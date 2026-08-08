@@ -3,12 +3,9 @@ import { Resend } from "resend";
 
 // import { createGoogleMeet } from "@/app/services/googleCalender";
 
-const resend = new Resend(process.env.RESEND_API_KEY!);
-
-
-
 export async function POST(req: Request) {
     try {
+        const resend = new Resend(process.env.RESEND_API_KEY!);
         const { name, email, phone, date, time } = await req.json();
 
         // const meetLink = await createGoogleMeet(
