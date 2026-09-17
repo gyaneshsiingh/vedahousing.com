@@ -88,7 +88,7 @@ const Header = () => {
                             ))}
                         </nav>
                     </div>
-
+                    {/* 
                     <div className="vh-contact">
                         <button
 
@@ -97,47 +97,46 @@ const Header = () => {
                         >
                             Enquire Now
                         </button>
-                    </div>
-                    {/* <button className="vh-menu-btn" onClick={(e) => setMenuOpen(!menuOpen)}
-                    aria-label="Menu">
-                    <span className={`vh-menu-icon ${menuOpen ? 'vh-menu-icon-open' : ''}`} />
-                </button>
-            </div>
-            {menuOpen && (
-                <div className="vh-mobile-menu" onClick={() => setMenuOpen(false)
-                }>
-                    <div className="vh-mobile-menu-inner" onClick={e => e.stopPropagation()}>
-                        <nav className="vh-mobile-menu-nav">
-                            {NAV_LINKS.map((link: NavLinkType) => (
-                                <Link key={link.label} href={link.href}
-                                    className="vh-mobile-menu-link"
-                                    onClick={() => setMenuOpen(false)}
-                                >
-                                    {link.label}
-                                </Link>
-                            ))}
-                        </nav>
-                    </div>
+                    </div> */}
+                    <button className="vh-menu-btn" onClick={(e) => setMenuOpen(!menuOpen)}
+                        aria-label="Menu">
+                        <span className={`vh-menu-icon ${menuOpen ? 'vh-menu-icon-open' : ''}`} />
+                    </button>
                 </div>
-            )} */}
-                </div>
+                {menuOpen && (
+                    <div className="vh-mobile-menu" onClick={() => setMenuOpen(false)
+                    }>
+                        <div className="vh-mobile-menu-inner" onClick={e => e.stopPropagation()}>
+                            <nav className="vh-mobile-menu-nav">
+                                {NAV_LINKS.map((link: NavLinkType) => (
+                                    <Link key={link.label} href={link.href}
+                                        className="vh-mobile-menu-link"
+                                        onClick={() => setMenuOpen(false)}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                ))}
+                            </nav>
+                        </div>
+                    </div>
+                )}
 
-            </header>
-            {openAppointment && (
-                <div className="vh-appoint-overlay">
-                    <div className="vh-appoint-model">
-                        <button className="vh-close-btn" onClick={(e) => setOpenAppointment(false)}>
-                            X
-                        </button>
-                        <Appoint
-                            onClose={() => {
-                                // console.log("Parent onClose called");
-                                setOpenAppointment(false);
-                            }}
-                        />
-                    </div>
-                </div>
-            )}
+
+                {/* // {openAppointment && (
+            //     <div className="vh-appoint-overlay">
+            //         <div className="vh-appoint-model">
+            //             <button className="vh-close-btn" onClick={(e) => setOpenAppointment(false)}>
+            //                 X
+            //             </button>
+            //             <Appoint
+            //                 onClose={() => {
+            //                     // console.log("Parent onClose called");
+            //                     setOpenAppointment(false);
+            //                 }}
+            //             />
+            //         </div>
+            //     </div> */}</header>
+
         </>
     )
 
